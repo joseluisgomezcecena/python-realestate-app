@@ -128,6 +128,20 @@
 
                {% endfor %}
 
+               {% if listings.has_next %}
+
+               <li class="page-item">
+                   <a href="?page={{listings.next_page_number}}" class="page-link">Next&nbsp;&nbsp;&raquo;</a>
+               </li>
+
+               {% else %}
+
+               <li class="page-item disabled">
+                    <a href="#" class="page-link">Next&nbsp;&nbsp;&raquo;</a>
+               </li>
+
+               {% endif %}
+
             </ul>
           {% endif %}
         </div>
